@@ -1,7 +1,7 @@
 import fibonacci
 import pascal_triangle
 import perrin
-import prime
+import prime_numbers
 import happy_numbers
 import lucky_numbers
 
