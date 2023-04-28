@@ -1,5 +1,6 @@
 # Author: M.A.R.C Original Music
 # ©2023
+# Prime Numbers Sequence Generator
 
 sequence = [2]
 

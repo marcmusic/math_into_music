@@ -1,7 +1,6 @@
 # Author: M.A.R.C Original Music
 # ©2023
-# Lucky Numbers Generator
-# A000959 - https://oeis.org/A000959
+# Lucky Numbers Sequence Generator
 
 def generate_sequence(num_of_terms = 10) -> list[int]:
     elimination_sequence = []

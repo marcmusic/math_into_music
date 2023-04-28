@@ -1,5 +1,6 @@
 # Author: M.A.R.C Original Music
 # ©2023
+# Pascal Triangle Sequence Generator
 
 def generate_sequence(num_of_levels = 10) -> list[int]:
     sequence = []

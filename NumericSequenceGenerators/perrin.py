@@ -1,5 +1,6 @@
 # Author: M.A.R.C Original Music
 # ©2023
+# Perrin Sequence Generator
 
 # f(0) = 3, f(1) = 0, f(2) = 2, f(n) = f(n-2) + f(n-3)
 

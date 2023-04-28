@@ -1,5 +1,6 @@
 # Author: M.A.R.C Original Music
 # ©2023
+# Fibonacci Sequence Generator
 
 # f(0) = 1, f(0) = 1, f(n) = f(n-1) + f(n-1)
 
