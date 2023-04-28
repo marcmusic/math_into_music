@@ -1,5 +1,5 @@
-#! /usr/bin/python3
 # Author: M.A.R.C Original Music
+# ©2023
 
 def convert_int_to_sequence(num) -> list[int]:
     sequence = []
