@@ -1,3 +1,6 @@
+# Author: M.A.R.C Original Music
+# ©2023
+
 class NumericSequence:
     def __init__(self, id, name, numeric_sequence, description) -> None:
         self.id = id
