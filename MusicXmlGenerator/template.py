@@ -1,12 +1,12 @@
-def get_xml(musical_sequence = ['C', 'D', 'E', 'F']):
+def get_xml(title, description, music_sheet_id, musical_sequence):
     return f"""<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 3.1 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
 <score-partwise version="3.1">
-  <movement-title>[Music Title - [algorithm code]]</movement-title>
+  <movement-title>{title}</movement-title>
   <identification>
     <creator type="composer">M.A.R.C</creator>
     <creator type="arranger">Math-inspired Music</creator>
-    <rights>©M.A.R.C Original Music | [music code]</rights>
+    <rights>©M.A.R.C Original Music | {music_sheet_id}</rights>
     <encoding>
       <software>Finale v25 for Mac</software>
       <encoding-date>2023-04-23</encoding-date>
@@ -61,7 +61,7 @@ def get_xml(musical_sequence = ['C', 'D', 'E', 'F']):
   </defaults>
   <credit page="1">
     <credit-type>title</credit-type>
-    <credit-words default-x="140" default-y="1475" font-size="24" valign="top">[Music Title - [algorithm code]]</credit-words>
+    <credit-words default-x="140" default-y="1475" font-size="24" valign="top">{title}</credit-words>
   </credit>
   <credit page="1">
     <credit-type>composer</credit-type>
@@ -69,7 +69,7 @@ def get_xml(musical_sequence = ['C', 'D', 'E', 'F']):
   </credit>
   <credit page="1">
     <credit-type>rights</credit-type>
-    <credit-words default-x="632" default-y="53" font-size="10" justify="center" valign="bottom">©M.A.R.C Original Music | [music code]</credit-words>
+    <credit-words default-x="632" default-y="53" font-size="10" justify="center" valign="bottom">©M.A.R.C Original Music | {music_sheet_id}</credit-words>
   </credit>
   <credit page="1">
     <credit-type>arranger</credit-type>
@@ -77,8 +77,7 @@ def get_xml(musical_sequence = ['C', 'D', 'E', 'F']):
   </credit>
   <credit page="1">
     <credit-type>subtitle</credit-type>
-    <credit-words default-x="140" default-y="1411" font-size="18" valign="top" xml:space="preserve">Based on the [n] Sequence
-sequence_and_notes)</credit-words>
+    <credit-words default-x="140" default-y="1411" font-size="18" valign="top" xml:space="preserve">{description}</credit-words>
   </credit>
   <part-list>
     <score-part id="P1">
