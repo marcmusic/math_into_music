@@ -1,7 +1,7 @@
 #! /usr/bin/python3
 # Author: M.A.R.C Original Music
 
-scale = []
+global scale
 
 def get_note(num):
 	divisor = len(scale)
@@ -10,6 +10,7 @@ def get_note(num):
 
 def convert_sequence(sequence, musical_scale) -> list[int]:
 	musical_sequence = []
+	global scale 
 	scale = musical_scale
 
 	for num in sequence:
