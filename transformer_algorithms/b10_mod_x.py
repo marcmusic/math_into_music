@@ -15,9 +15,10 @@ def convert_sequence(num_sequence, music_scale) -> MusicalSequence:
 	scale = music_scale[1]
 	
 	mus_sequence = []
+	algorithm_id = f'B10Mod{str(len(music_scale[1]))}.{music_scale[0]}'
 
 	for num in num_sequence:
 		music_note = get_note(num)
 		mus_sequence.append(music_note)
 
-	return MusicalSequence(mus_sequence, f'B10Mod{str(len(music_scale[1]))}{music_scale[0]}')
+	return MusicalSequence(mus_sequence, algorithm_id)
