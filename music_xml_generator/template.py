@@ -108,8 +108,8 @@ def get_notes_code(musical_sequence):
     num_of_measures = (num_of_notes // 4) + 1
 
     code = ""
-    for measure_number in range(1, num_of_measures):
-        code += get_measure_code(musical_sequence[:4], measure_number)
+    for measure_number in range(num_of_measures):
+        code += get_measure_code(musical_sequence[:4], measure_number + 1)
         del musical_sequence[:4]
 
     return code
