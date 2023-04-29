@@ -8,7 +8,7 @@ def get_xml(title, description, music_sheet_id, musical_sequence):
     <creator type="arranger">Math-inspired Music</creator>
     <rights>©M.A.R.C Original Music | {music_sheet_id}</rights>
     <encoding>
-      <software>Finale v25 for Mac</software>
+      <software>M.A.R.C Original Music Scripts</software>
       <encoding-date>2023-04-23</encoding-date>
       <supports attribute="new-system" element="print" type="yes" value="yes"/>
       <supports attribute="new-page" element="print" type="yes" value="yes"/>
