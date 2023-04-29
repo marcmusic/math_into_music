@@ -1,4 +1,4 @@
-def get_xml(music_notes = ['C', 'D', 'E', 'F'], sequence_and_notes = [(1, 'C')]):
+def get_xml(musical_sequence = ['C', 'D', 'E', 'F']):
     return f"""<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 3.1 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
 <score-partwise version="3.1">
@@ -78,7 +78,7 @@ def get_xml(music_notes = ['C', 'D', 'E', 'F'], sequence_and_notes = [(1, 'C')])
   <credit page="1">
     <credit-type>subtitle</credit-type>
     <credit-words default-x="140" default-y="1411" font-size="18" valign="top" xml:space="preserve">Based on the [n] Sequence
-{str(sequence_and_notes)}</credit-words>
+sequence_and_notes)</credit-words>
   </credit>
   <part-list>
     <score-part id="P1">
@@ -98,25 +98,25 @@ def get_xml(music_notes = ['C', 'D', 'E', 'F'], sequence_and_notes = [(1, 'C')])
   </part-list>
   <!--=========================================================-->
   <part id="P1">
-    {get_notes_code(music_notes)}
+    {get_notes_code(musical_sequence)}
   </part>
   <!--=========================================================-->
 </score-partwise>
     """
 
-def get_notes_code(music_notes):
-    num_of_notes = len(music_notes)
+def get_notes_code(musical_sequence):
+    num_of_notes = len(musical_sequence)
     num_of_measures = (num_of_notes // 4) + 1
 
     code = ""
     for measure_number in range(1, num_of_measures):
-        code += get_measure_code(music_notes[:4], measure_number)
-        del music_notes[:4]
+        code += get_measure_code(musical_sequence[:4], measure_number)
+        del musical_sequence[:4]
 
     return code
 
 
-def get_measure_code(music_notes, measure_number):
+def get_measure_code(musical_sequence, measure_number):
     code = ""
 
     if measure_number == 1:
@@ -158,17 +158,16 @@ def get_measure_code(music_notes, measure_number):
       </print>
             """
 
-    for note in music_notes:
+    for note in musical_sequence:
         accidental = ''
         has_accidental = note[-1] == '#'
         
         if has_accidental:
             accidental = note[-1]
             note = note[:-1]
-            print(note)
 
         code += """<note>
-        <pitch>n
+        <pitch>
           <step>"""+note+"""</step>
           """+get_alter_code(accidental)+"""
           <octave>4</octave>
