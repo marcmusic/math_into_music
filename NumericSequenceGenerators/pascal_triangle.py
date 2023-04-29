@@ -2,11 +2,13 @@
 # ©2023
 # Pascal Triangle Sequence Generator
 
-def generate_sequence(num_of_levels = 10) -> list[int]:
+from .util.numeric_sequence import NumericSequence
+
+def generate_sequence(num_of_levels = 10) -> NumericSequence:
     sequence = []
     for i in range(num_of_levels):
         sequence += generate_pascal_triangle_level_sequence(i)
-    return sequence
+    return NumericSequence('S-12-0002','Pascal Triangle', sequence, '1 \n1,1\n1,2,1.')
 
 
 def generate_pascal_triangle_level_sequence(level_num):

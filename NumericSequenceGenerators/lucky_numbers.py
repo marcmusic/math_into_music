@@ -2,7 +2,9 @@
 # ©2023
 # Lucky Numbers Sequence Generator
 
-def generate_sequence(num_of_terms = 10) -> list[int]:
+from .util.numeric_sequence import NumericSequence
+
+def generate_sequence(num_of_terms = 10) -> NumericSequence:
     elimination_sequence = []
     sequence = seed_sequence(num_of_terms * 23)
     iteration = 1
@@ -18,7 +20,7 @@ def generate_sequence(num_of_terms = 10) -> list[int]:
         iteration += 1
         elimination_sequence = []
 
-    return sequence
+    return NumericSequence('S-23-0003','Lucky Numbers', sequence, 'Add description')
 
 def seed_sequence(num_of_terms) -> list[int]:
     seed = []
