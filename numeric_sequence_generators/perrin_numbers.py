@@ -12,4 +12,4 @@ def generate_sequence(num_of_terms = 10) -> NumericSequence:
     for i in range(len(sequence), num_of_terms):
         sequence.append(sequence[i-2] + sequence[i-3])
 
-    return NumericSequence('S-13-0001','Perrin numbers [1,1]', sequence, 'f(0) = 3, f(1) = 0, f(2) = 2, f(n) = f(n-2) + f(n-3) for n > 2.')
+    return NumericSequence('Perrin','Perrin numbers [1,1]', sequence, 'f(0) = 3, f(1) = 0, f(2) = 2, f(n) = f(n-2) + f(n-3) for n > 2.')

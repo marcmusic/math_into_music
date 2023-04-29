@@ -20,7 +20,7 @@ def generate_sequence(num_of_terms = 10) -> NumericSequence:
         iteration += 1
         elimination_sequence = []
 
-    return NumericSequence('S-23-0003','Lucky Numbers', sequence, 'Add description')
+    return NumericSequence('Lucky','Lucky Numbers', sequence, 'Add description')
 
 def seed_sequence(num_of_terms) -> list[int]:
     seed = []

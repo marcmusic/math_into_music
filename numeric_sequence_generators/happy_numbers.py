@@ -9,4 +9,4 @@ def generate_sequence(num_of_terms = 10) -> NumericSequence:
     if len(sequence) < num_of_terms:
         num_of_terms = len(sequence)
 
-    return NumericSequence('S-23-0002','Happy Numbers', sequence[:num_of_terms], 'Add description')
+    return NumericSequence('Happy','Happy Numbers', sequence[:num_of_terms], 'Add description')
