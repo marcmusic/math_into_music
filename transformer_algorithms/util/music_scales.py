@@ -9,10 +9,10 @@ INVERSE_DIATONIC_SCALE = ["D", "C", "B", "A", "G", "F", "E"]
 INVERSE_CHROMATIC_SCALE = ["C#", "C", "B", "A#", "A", "G#", "G", "F#", "F", "E", "D#", "D"]
 
 MUSIC_SCALES = {
-    "Pentatonic Scale": PENTATONIC_SCALE,
-    "Inverse Pentatonic Scale": INVERSE_PENTATONIC_SCALE,
-    "Diatonic Scale": DIATONIC_SCALE,
-    "Inverse Diatonic Scale": INVERSE_DIATONIC_SCALE,
-    "Chromatic Scale": CHROMATIC_SCALE,
-    "Inverse Chromatic Scale": INVERSE_CHROMATIC_SCALE
+    "C1Pen": PENTATONIC_SCALE,
+    "C1iPen": INVERSE_PENTATONIC_SCALE,
+    "C1Dia": DIATONIC_SCALE,
+    "C1iDia": INVERSE_DIATONIC_SCALE,
+    "C1Chro": CHROMATIC_SCALE,
+    "C1iChro": INVERSE_CHROMATIC_SCALE
 }
