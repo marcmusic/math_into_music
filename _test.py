@@ -1,10 +1,10 @@
-from NumericSequenceGenerators import fibonacci
-from NumericSequenceGenerators import pascal_triangle
-from NumericSequenceGenerators import perrin_numbers
-from NumericSequenceGenerators import prime_numbers
-from NumericSequenceGenerators import happy_numbers
-from NumericSequenceGenerators import lucky_numbers
-from NumericSequenceGenerators import exponential_numbers
+from numeric_sequence_generators import fibonacci
+from numeric_sequence_generators import pascal_triangle
+from numeric_sequence_generators import perrin_numbers
+from numeric_sequence_generators import prime_numbers
+from numeric_sequence_generators import happy_numbers
+from numeric_sequence_generators import lucky_numbers
+from numeric_sequence_generators import exponential_numbers
 
 print(pascal_triangle.generate_sequence())
 print(fibonacci.generate_sequence())
