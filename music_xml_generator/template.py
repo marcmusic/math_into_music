@@ -148,13 +148,13 @@ def get_measure_code(musical_sequence, measure_number):
         <sound tempo="120"/>
         """
     else:
-        code+= '<measure number="'+str(measure_number)+'" width="169">'
+        code+= f'<measure number="{str(measure_number)}" width="169">'
         if measure_number % 5 == 0:
             code += """<print new-system="yes">
-        <system-layout>
-          <system-distance>114</system-distance>
-        </system-layout>
-      </print>
+              <system-layout>
+                <system-distance>114</system-distance>
+              </system-layout>
+            </print>
             """
 
     for note in musical_sequence:
@@ -165,16 +165,16 @@ def get_measure_code(musical_sequence, measure_number):
             accidental = note[-1]
             note = note[:-1]
 
-        code += """<note>
+        code += f"""<note>
         <pitch>
-          <step>"""+note+"""</step>
-          """+get_alter_code(accidental)+"""
+          <step>{note}</step>
+          {get_alter_code(accidental)}
           <octave>4</octave>
         </pitch>
         <duration>2</duration>
         <voice>1</voice>
         <type>quarter</type>
-        """+get_accidental_code(accidental)+"""
+        {get_accidental_code(accidental)}
         <stem>up</stem>
       </note>
         """
