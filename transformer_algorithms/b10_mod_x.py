@@ -11,8 +11,12 @@ def get_note(num):
 	return scale[modNum]
 
 def convert_sequence(num_sequence, music_scale) -> MusicalSequence:
+	mus_scale = music_scale[1]
+	max_mus_scale_index = len(music_scale[1]) - 1
+
 	global scale 
-	scale = music_scale[1]
+	# The music scale is shifted one value up, so C is index 1.
+	scale = mus_scale[max_mus_scale_index:] + mus_scale[0:max_mus_scale_index]
 	
 	mus_sequence = []
 	algorithm_id = f'B10Mod{str(len(music_scale[1]))}.{music_scale[0]}'
